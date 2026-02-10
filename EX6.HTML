@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Checker</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    
-    <script>
-        a=prompt("donnnez votre age :")
-if(a>=1 && a<=17){alert("Vous n'êtes pas encore majeur")}
-if(a>=18 && a<=49){alert("Vous êtes majeur mais pas encore senior.")}
-if(a>=50 && a<=50){alert("Vous êtes senior mais pas encore retraité." )}
-else{alert( "Vous êtes retraité, profitez de votre temps libre !" )};
-    </script>
+
+  <h2>Check your age</h2>
+
+  <form onsubmit="checkAge(); return false;">
+    <label>Donnez votre âge :</label><br>
+    <input type="number" id="age" min="1">
+    <br>
+    <button type="submit">Vérifier</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAge() {
+      const a = Number(document.getElementById("age").value);
+      let message = "";
+
+      if (a >= 1 && a <= 17) {
+        message = "Vous n'êtes pas encore majeur.";
+      }
+      else if (a >= 18 && a <= 49) {
+        message = "Vous êtes majeur mais pas encore senior.";
+      }
+      else if (a >= 50 && a <= 59) {
+        message = "Vous êtes senior mais pas encore retraité.";
+      }
+      else if (a >= 60) {
+        message = "Vous êtes retraité, profitez de votre temps libre !";
+      }
+      else {
+        message = "Veuillez entrer un âge valide.";
+      }
+
+      document.getElementById("result").textContent = message;
+
+      alert(message);
+    }
+  </script>
+
 </body>
 </html>
