@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 14</title>
+</head>
+<body>
+
+  <h3>Exercice 14</h3>
+
+  <input type="text" id="texte">
+  <button onclick="verifier()">Vérifier</button>
+
+  <script>
+    function verifier() {
+      const champ = document.getElementById("texte");
+
+      if (champ.value === "") {
+        alert("Le champ est vide !");
+      } else {
+        champ.select();
+      }
+    }
+  </script>
+
+</body>
+</html>
