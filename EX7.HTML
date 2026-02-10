@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div >
+        <h3>1. Bouton Simple</h3>
+        <button onclick="alert('Bonjour ! Vous avez cliqué sur le bouton.')">
+            Cliquez ici
+        </button>
+    </div>
+
+    <div >
+        <h3>2 & 3. Survol avec paramètre</h3>
+        
+        <p>Passez votre souris sur le lien ou l'image ci-dessous :</p>
+        
+        <a href="#" onmouseover="afficherMessage('Vous survolez le lien bleu !')">
+            Survolez ce lien
+        </a>
+        
+        <br><br>
+
+        <img src="https://via.placeholder.com/150" 
+             alt="Image de test" 
+             onmouseover="afficherMessage('L\'image a été détectée !')">
+    </div> 
+
+    
+    <script>
+        function afficherMessage(texte) {
+            alert(texte);}
+    </script>
+</body>
+</html>

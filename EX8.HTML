@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="zone-message"></div>
+
+    <div class="container">
+        <a href="https://www.google.com" 
+           onmouseover="montrerInvitation()" 
+           onmouseout="effacerInvitation()">
+           Visiter notre site web
+        </a>
+
+        <br><br>
+
+        <a href="https://www.google.com" 
+           onmouseover="montrerInvitation()" 
+           onmouseout="effacerInvitation()">
+           <img src="" alt="Bouton">
+        </a>
+    </div>
+
+    <script>
+        const zoneTexte = document.getElementById('zone-message'); 
+function montrerInvitation() {
+            zoneTexte.innerText = "👉 Cliquez sur ce lien pour en savoir plus !";
+        }
+
+        function effacerInvitation() {
+            zoneTexte.innerText = "";
+        }
+
+    </script>
+    
+</body>
+</html>

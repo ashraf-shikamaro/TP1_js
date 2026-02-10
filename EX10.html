@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="section">
+      <h2>1. Nombres de 1 à 10</h2>
+      <div id="liste-nombres" class="number-list"></div>
+    </div>
+
+    <div class="section">
+      <h2>2. Tableau 10x10 Dynamique</h2>
+      <div id="conteneur-tableau"></div>
+    </div>
+    <script>
+      function afficherUnADix() {
+        let resultat = "";
+        for (let i = 1; i <= 10; i++) {
+          resultat += i + (i < 10 ? " - " : "");
+        }
+        document.getElementById("liste-nombres").innerText = resultat;
+      }
+
+      function genererTableau() {
+        let htmlTableau = "<table border='2'>";
+
+        for (let l = 1; l <= 10; l++) {
+          htmlTableau += "<tr>";
+
+          for (let c = 1; c <= 10; c++) {
+            htmlTableau += `<td>L${l} C${c}</td>`;
+          }
+
+          htmlTableau += "</tr>";
+        }
+
+        htmlTableau += "</table>";
+        document.getElementById("conteneur-tableau").innerHTML = htmlTableau;
+      }
+
+      window.onload = function () {
+        afficherUnADix();
+        genererTableau();
+      };
+    </script>
+  </body>
+</html>

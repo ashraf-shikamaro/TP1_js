@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice - Table de Multiplication</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --bg-color: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            color: #475569;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .result {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .multiplier {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2 id="titre-table"></h2>
+    <table id="table-multi">
+        </table>
+</div>
+
+<script>
+    N=prompt("donner un nombre")
+
+    document.getElementById('titre-table').innerText = `Table de multiplication de ${N}`;
+
+    const tableElement = document.getElementById('table-multi');
+    let content = "";
+
+    for (let i = 1; i <= 10; i++) {
+        content += `
+            <tr>
+                <td>${N} <span class="multiplier">×</span> ${i}</td>
+                <td>=</td>
+                <td class="result">${N * i}</td>
+            </tr>`;
+    }
+
+    tableElement.innerHTML = content;
+</script>
+
+</body>
+</html>

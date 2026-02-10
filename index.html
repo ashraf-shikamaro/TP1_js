@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu des Exercices</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f8fafc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #1e293b;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 800px;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 2rem;
+        font-weight: 700;
+        color: #4f46e5;
+        letter-spacing: -0.025em;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .exercise-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        background: white;
+        color: #4f46e5;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 12px;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+        border: 1px solid #e2e8f0;
+      }
+
+      .exercise-card:hover {
+        transform: translateY(-5px);
+        background-color: #4f46e5;
+        color: white;
+        box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+        border-color: #4f46e5;
+      }
+
+      .exercise-card span {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        opacity: 0.7;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mes Exercices JavaScript</h1>
+
+      <nav class="menu-grid">
+        <a href="EX1.html" class="exercise-card">EX1 </a>
+        <a href="EX2.html" class="exercise-card">EX2 </a>
+        <a href="EX3.HTML" class="exercise-card">EX3 </a>
+        <a href="EX4.HTML" class="exercise-card">EX4 </a>
+        <a href="EX5.HTML" class="exercise-card">EX5 </a>
+        <a href="EX6.HTML" class="exercise-card">EX6 </a>
+        <a href="EX7.HTML" class="exercise-card">EX7 </a>
+        <a href="EX8.HTML" class="exercise-card">EX8 </a>
+        <a href="EX9.html" class="exercise-card">EX9 </a>
+        <a href="EX10.html" class="exercise-card">EX10 </a>
+        <a href="EX11.html" class="exercise-card">EX11 </a>
+        <a href="EX12.html" class="exercise-card">EX12 </a>
+      </nav>
+    </div>
+  </body>
+</html>

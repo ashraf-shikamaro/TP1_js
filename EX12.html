@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables de Multiplication Pro</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .table-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 15px;
+            border-top: 5px solid #1a73e8;
+        }
+
+        .table-card h3 {
+            text-align: center;
+            margin-top: 0;
+            color: #1a73e8;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #fafafa;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .res { font-weight: bold; color: #d93025; }
+    </style>
+</head>
+<body>
+
+    <h1>Multiplication Master</h1>
+    <div id="affichage" class="grid-container"></div>
+
+    <script>
+        
+        function table_mult(N) {
+            let html = `<div class="table-card">`;
+            html += `<h3>Table de ${N}</h3>`;
+            html += `<table>`;
+
+            for (let i = 1; i <= 10; i++) {
+                html += `
+                    <tr>
+                        <td>${N} x ${i}</td>
+                        <td>=</td>
+                        <td class="res">${N * i}</td>
+                    </tr>`;
+            }
+
+            html += `</table></div>`;
+            return html;
+        }
+
+
+        const conteneur = document.getElementById('affichage');
+
+       
+        let toutesLesTables = "";
+        for (let j = 1; j <= 10; j++) {
+            toutesLesTables += table_mult(j);
+        }
+        conteneur.innerHTML = toutesLesTables;
+
+    </script>
+</body>
+</html>
